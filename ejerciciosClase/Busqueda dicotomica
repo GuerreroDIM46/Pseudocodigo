@@ -1,0 +1,69 @@
+//  Algoritmo con una función que realiza búsqeuda
+//   de un número entero en un vector con 
+//   elementos ordenados
+// Autor: DptoSIyC
+// Fecha: ---
+Proceso BusquedaBinaria
+	Definir LONGITUD1, vector, dato, busqueda1 Como Enteros;
+	Dimension vector[8];
+	
+	LONGITUD1 <- 8;
+	dato <- 0;
+	
+	vector[0] <- 2;
+	vector[1] <- 5;
+	vector[2] <- 8;
+	vector[3] <- 11;
+	vector[4] <- 14;
+	vector[5] <- 24;
+	vector[6] <- 31;
+	vector[7] <- 50;
+	
+	Escribir Sin Saltar "Introduce el dato a buscar: ";
+	Leer dato;
+	
+	busqueda1 <- busquedaBin(vector, LONGITUD1, dato);
+	Escribir "Resultado: ", busqueda1;
+	
+FinProceso
+
+//  Función que busca un dato en un vector empleando
+// búsqueda binaria (sin recursión)
+//  Entradas: vector: estructura en la que buscar,
+//  LONGITUD1: núm. elementos máx. del vector, 
+//  dato: número entero a buscar
+//  Devuelve: -1 si no encuentra el dato o bien el 
+// índice del elemento en el que se encuentra. Si ese
+// dato se repite solo indica el primer índice.
+//
+Funcion buscaBin <- busquedaBin (vector, LONGITUD1, dato)
+	Definir encontrado Como Logico;
+	Definir primero, central, ultimo, buscaBin como Entero;
+	
+	primero <- 1;
+	ultimo <- LONGITUD1 -1;
+	encontrado <- Falso;
+	
+	Mientras (primero <= ultimo) Y (NO encontrado) Hacer
+		central <- TRUNC((primero + ultimo )/2);
+		Si vector[central] = dato Entonces
+			encontrado <- Verdadero;
+		SiNo
+			Si vector[central] > dato Entonces
+				ultimo <- central -1;
+			SiNo
+				primero <- central +1;
+			FinSi
+		FinSi
+		Escribir "primero: ", primero, ", central: ", central, ", último: ", ultimo;
+	FinMientras
+	
+	Si NO encontrado Entonces
+		buscaBin <- -1;
+	SiNo
+		buscaBin <- central;
+	FinSi
+	
+	
+	
+FinFuncion

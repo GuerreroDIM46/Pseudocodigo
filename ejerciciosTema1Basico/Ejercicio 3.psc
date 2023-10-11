@@ -2,7 +2,7 @@
 //Autor: Guerrero
 //Fecha: 13/07/2023
 
-Proceso Elegir
+Proceso Elegirdato
 
 //seccion de declaracion e inicializacion
 

@@ -1,8 +1,10 @@
-//Ejercicio1: vector n elementos y elige mayor
+//Ejercicio1: Algoritmo que crea un vector de 3 elementos de tipo cadena. Sus datos se
+//			  leerán por teclado. Copiar los elementos del vector en otro vector pero en orden inverso, y
+//            mostrar este último por pantalla.
 //Autor: Guerrero
 //Fecha: 13/07/2023
 
-Proceso vectorMayor
+Proceso InvertirVector
 
 //seccion de declaracion e inicializacion
 
